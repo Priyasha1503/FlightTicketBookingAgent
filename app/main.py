@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="Autonomous Flight Booking Agent")
+app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"status": "Flight Agent running"}
+    return {"msg": "root works"}
+
+@app.get("/test")
+def test():
+    return {"msg": "test works"}
